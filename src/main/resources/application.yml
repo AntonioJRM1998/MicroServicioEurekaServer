@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-server
+eureka:
+  # evitar aviso EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY'RE NOT
+  server:
+    enableSelfPreservation: false
+    max-threads-for-peer-replication: 0
+  # Impedimos que Eureka se registre a sí misma
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
